@@ -1,0 +1,16 @@
+Added Component: Designator=PCF8591(IDC2.54-LI-2x8P)
+Add component (AddParameter): Name = "BOM名称"; Value = "8*2P接插件"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "版权归属"; Value = "源创客"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "学习资源"; Value = "www.ooocke.com"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=AIN0 Pin=PCF8591-1
+Added Pin To Net: NetName=GND Pin=PCF8591-5
+Added Pin To Net: NetName=GND Pin=PCF8591-6
+Added Pin To Net: NetName=GND Pin=PCF8591-7
+Added Pin To Net: NetName=GND Pin=PCF8591-8
+Added Pin To Net: NetName=P21 Pin=PCF8591-9
+Added Pin To Net: NetName=P20 Pin=PCF8591-10
+Added Pin To Net: NetName=GND Pin=PCF8591-12
+Added Pin To Net: NetName=GND Pin=PCF8591-13
+Added Pin To Net: NetName=VCC Pin=PCF8591-14
+Added Pin To Net: NetName=VCC Pin=PCF8591-16
+Added Member To Class: ClassName=原理图 Member=Component PCF8591 Header 8X2

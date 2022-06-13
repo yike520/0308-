@@ -1,0 +1,38 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\Users\wang\Desktop\030110kv高压开关柜电气设备在线测温系统应用研究\实物程序\程序.uvproj
+Project File Date:  03/03/2022
+
+<h2>Output:</h2>
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDSTRING?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GET_TEMP?MAIN
+Program Size: data=104.4 xdata=0 code=3399
+creating hex file from ".\Objects\程序"...
+".\Objects\程序" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDSTRING?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GET_TEMP?MAIN
+Program Size: data=104.4 xdata=0 code=3398
+creating hex file from ".\Objects\程序"...
+".\Objects\程序" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDSTRING?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GET_TEMP?MAIN
+Program Size: data=104.4 xdata=0 code=3409
+creating hex file from ".\Objects\程序"...
+".\Objects\程序" - 0 Error(s), 2 Warning(s).

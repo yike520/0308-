@@ -1,0 +1,89 @@
+C51 COMPILER V9.00   UART                                                                  04/20/2020 20:42:54 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE UART
+OBJECT MODULE PLACED IN .\Objects\uart.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE uart.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\uart
+                    -.lst) TABS(2) OBJECT(.\Objects\uart.obj)
+
+line level    source
+
+   1          #include "uart.h"
+   2          #define FOSC            11059200UL
+   3          #define BRT             (65536 - FOSC / 115200 / 4)
+   4          
+   5          bit busy;
+   6          
+   7          /*************************************************
+   8          Function: uart_init
+   9          Description: 串口的初始化
+  10          Input: NULL
+  11          Output: NULL
+  12          Return: void
+  13          Others: 
+  14          *************************************************/
+  15          void uart_init()    //9600bps@12.000MHz
+  16          {
+  17   1        SCON |= 0x50; //设置串口通信控制寄存器，工作方式1，允许串口接收数据
+*** ERROR C202 IN LINE 17 OF UART.C: 'SCON': undefined identifier
+  18   1        TMOD |= 0x20; //设定定时器T1，工作方式2，自动装初值
+*** ERROR C202 IN LINE 18 OF UART.C: 'TMOD': undefined identifier
+  19   1        TH1 = 0xfd;   //设定波特率为9600bps，工作方式2，自动装初值，9600
+*** ERROR C202 IN LINE 19 OF UART.C: 'TH1': undefined identifier
+  20   1        TL1 = 0xfd;   
+*** ERROR C202 IN LINE 20 OF UART.C: 'TL1': undefined identifier
+  21   1      
+  22   1      //TI = 1;
+  23   1      //  TI = 0;
+  24   1        TR1 = 1;    //串口1选择定时器1为波特率发生器
+*** ERROR C202 IN LINE 24 OF UART.C: 'TR1': undefined identifier
+  25   1        ES = 1;     //串口中断控制位开
+*** ERROR C202 IN LINE 25 OF UART.C: 'ES': undefined identifier
+  26   1         
+  27   1      
+  28   1      
+  29   1      }
+  30          
+  31          
+  32          
+  33          
+  34          /*************************************************
+  35          Function: SendData
+  36          Description: 串口发送单字节函数
+  37          Input: 
+  38            dat：将要发送的单字节数据
+  39          Output: NULL
+  40          Return: void
+  41          Others:
+  42          *************************************************/
+  43          void SendData(unsigned char dat)
+  44          {
+  45   1          SBUF = dat;       //把数据赋值给寄存器准备发送
+*** ERROR C202 IN LINE 45 OF UART.C: 'SBUF': undefined identifier
+  46   1          while(!TI);       
+*** ERROR C202 IN LINE 46 OF UART.C: 'TI': undefined identifier
+C51 COMPILER V9.00   UART                                                                  04/20/2020 20:42:54 PAGE 2   
+
+  47   1          TI = 0;         //写数据到UART数据寄存器
+*** ERROR C202 IN LINE 47 OF UART.C: 'TI': undefined identifier
+  48   1      }
+  49          
+  50          /*************************************************
+  51          Function: SendString
+  52          Description: 串口发送字符串函数
+  53          Input:
+  54            dat：将要发送的字符串数据
+  55          Output: NULL
+  56          Return: void
+  57          Others:
+  58          *************************************************/
+  59          void SendString(unsigned char *s)
+  60          {
+  61   1          while (*s)                  //检测字符串结束标志
+  62   1          {
+  63   2              SendData(*s++);         //发送当前字符
+  64   2          }
+  65   1      }
+*** WARNING C316 IN LINE 65 OF uart.c: unterminated conditionals
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  9 ERROR(S)
